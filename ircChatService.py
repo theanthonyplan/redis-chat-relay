@@ -1,11 +1,11 @@
 import sys
 import json
-
+import redis
 from twisted.internet import defer, endpoints, protocol, reactor, task
 from twisted.python import log
 from twisted.words.protocols import irc
 from twisted.python import log
-import redis
+
 
 
 

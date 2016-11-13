@@ -1,3 +1,12 @@
+## Python Dependencies
+```
+pip install Twisted redis
+```
+## Npm Dependencies
+```
+npm install discord.io redis hitbox-chat tmi.js
+```
+
 redisChatWatcher.py - A simple shell utility for monitoring network messages
 
 
