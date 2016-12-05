@@ -7,7 +7,7 @@ var tmi = require("tmi.js");
 //////////// CONFIG ////////////////////////
 var config = require('./my_config.json');
 
-var CHANNEL = config.api.twitch.channel;
+var CHANNELS = config.api.twitch.channels;
 var USER = config.api.twitch.username;
 var PASSWORD = config.api.twitch.password;
 // var PASSWORD = 'oauth:twitchAuthTokenString'; // can use auth token instead 
@@ -32,7 +32,7 @@ var options = {
         username: USER,
         password: PASSWORD
     },
-    channels: [CHANNEL]
+    channels: CHANNELS
 };
 
 var client = new tmi.client(options);

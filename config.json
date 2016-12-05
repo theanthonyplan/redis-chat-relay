@@ -1,0 +1,36 @@
+{
+  "api": {
+    "twitch": "",
+    "hitbox": "",
+    "irc": "",
+    "discord": "",
+    "steam": "@$124API-KEY-GOES-HERE-sdasdsdasd4F7777"
+  },
+  "user": {
+    "twitch": {
+      "username": "",
+      "password": "",
+      "channels": ["#porpoise_pete"]
+    },
+    "hitbox": {
+      "username": "",
+      "password": "",
+      "channel": ""
+    },
+    "irc": {
+      "username": "",
+      "password": "",
+      "channel": ""
+    },
+    "discord": {
+      "username": "",
+      "password": "",
+      "channel": ""
+    },
+    "steam": {
+      "username": "",
+      "password": "",
+      "channel": ""
+    }
+  }
+}
