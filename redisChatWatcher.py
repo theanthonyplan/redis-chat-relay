@@ -10,8 +10,8 @@ def my_handler(message):
     print '[{}] - {}\n'.format(message['channel'], message['data'])
 
 # subscribe to channel and provide the callback
-p.subscribe(**{'hub': my_handler})
-p.subscribe(**{'chat': my_handler})
+p.subscribe({'hub': my_handler})
+p.subscribe({'chat': my_handler})
 
 
 # start the message handling loop

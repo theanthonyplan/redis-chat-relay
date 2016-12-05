@@ -5,9 +5,11 @@ var tmi = require("tmi.js");
 
 
 //////////// CONFIG ////////////////////////
-var CHANNEL = '#porpoise_pete';
-var USER = 'twitchUsername';
-var PASSWORD = 'password';   
+var config = require('./my_config.json');
+
+var CHANNEL = config.api.twitch.channel;
+var USER = config.api.twitch.username;
+var PASSWORD = config.api.twitch.password;
 // var PASSWORD = 'oauth:twitchAuthTokenString'; // can use auth token instead 
 //////////////////////////////////////////
 

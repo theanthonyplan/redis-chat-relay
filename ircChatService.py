@@ -7,16 +7,25 @@ from twisted.words.protocols import irc
 from twisted.python import log
 
 
+import json
 
-
-
+IRC_SERVER = ''
+IRC_CHANNEL = ''
+NICKNAME = ''
 
 
 
 ############# CONFIG DATA ###
-IRC_SERVER = 'tcp:irc.geekshed.net:6667'
-IRC_CHANNEL = '#p0rp'
-NICKNAME = 'relayBot'
+with open('my_config.json') as json_data:
+    d = json.load(json_data)
+    IRC_SERVER = d['user']['irc']['server']
+    IRC_CHANNEL = d['user']['irc']['channel']
+    NICKNAME = d['user']['irc']['username']
+    print "\nConfig.json: {}\n\n".format(d)
+    print "Attempting connection to channel:{0} on server:{1} as {2} ".format( IRC_CHANNEL, IRC_SERVER, NICKNAME)
+
+
+
 #############################
 
 
@@ -79,8 +88,12 @@ class MyFirstIRCProtocol(irc.IRCClient):
         self.p = self.r.pubsub()
         print "PubSubscriber Object: {}".format(self.p)
         # subscribe to the chat server
-        self.p.subscribe(**{'chat': self.send_to_irc_handler})
-        self.p.subscribe(**{'hub': self.send_to_irc_handler})
+        self.p.subscribe(**{"chat": self.send_to_irc_handler})
+        self.p.subscribe(**{"hub": self.send_to_irc_handler})
+
+        print "type(self.r): {}".format(type(self.r))
+        print "str(self.r): {}".format(self.r)
+
         # start the listener in a separate thread
         self.thread = self.p.run_in_thread(sleep_time=0.001)
 

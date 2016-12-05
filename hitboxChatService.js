@@ -4,9 +4,11 @@ var sub = redis.createClient(), pub = redis.createClient();     // get pub and s
 
 
 // /////// CONFIG ////////////
-var CHANNEL = 'p0rp';
-var USERNAME = 'hitboxUsername';
-var PASSWORD = 'hitboxPassword';
+var config = require('./my_config.json');
+var TOKEN = config.api.discord;
+var CHANNEL = config.user.hitbox.channel;
+var USERNAME = config.user.hitbox.username;
+var PASSWORD = config.user.hitbox.password;
 //////////////////////////////
 
 

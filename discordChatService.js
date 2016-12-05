@@ -1,18 +1,22 @@
 /**
  * Created by p0rp on 10/17/2016.
  */
+var config = require('./my_config.json');
+var TOKEN = config.api.discord;
+var BOT_NAME = "RelayBot";                        // MUST MATCH DISCORD BOT NAME
+
 var i = require('util').inspect;
 var Discord = require('discord.io');    // get Discord
 var redis = require('redis');           // get Redis
 var sub = redis.createClient(), pub = redis.createClient();     // get pub and sub objects
 
 ////////////////////// CONFIG //////////////////////////////////////////////
-var TOKEN = "discordToken"; 
-var BOT_NAME = "RelayBot";                        // MUST MATCH DISCORD BOT NAME
-var GENERAL_CHANNEL = "94981076627234816",        // Channel ID as a string 
-    KUOUSHI_CHANNEL = '231361556439498762',       // todo: this should be handled 
-    LEARN_CHANNEL = '231204589871824896',         // automatically, but i was lazy
-    TODO_CHANNEL = '231363745824112640';          // i am not sorry.
+console.log('Discord Api Token: ', TOKEN)
+
+var GENERAL_CHANNEL = "94981076627234816";        // Channel ID as a string
+    // KUOUSHI_CHANNEL = '231361556439498762',       // todo: this should be handled
+    // LEARN_CHANNEL = '231204589871824896',         // automatically, but i was lazy
+    // TODO_CHANNEL = '231363745824112640';          // i am not sorry.
 
 var CHANNEL_MAP = {                               // map the channel ID with
     "94981076627234816": "General",               // its string name.
