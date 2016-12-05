@@ -14,7 +14,7 @@ var PASSWORD = config.api.twitch.password;
 //////////////////////////////////////////
 
 
-var PLATFORM = 'TWITCH' + CHANNEL;
+var PLATFORM = 'TWITCH' + CHANNEL[0];           // very sloppy 
 var LAST_MESSAGE = '';
 
 
