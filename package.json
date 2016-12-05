@@ -1,0 +1,27 @@
+{
+  "name": "redis-chat-relay",
+  "version": "1.0.0",
+  "description": "```\r pip install Twisted redis\r ```\r ## Npm Dependencies\r ```\r npm install discord.io redis hitbox-chat tmi.js\r ```",
+  "main": "main.js",
+  "dependencies": {
+    "discord.io": "^2.3.0",
+    "jsonfile": "^2.4.0",
+    "redis": "^2.6.3",
+    "hitbox-chat": "~0.1.5",
+    "tmi.js": "~1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theanthonyplan/redis-chat-relay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theanthonyplan/redis-chat-relay/issues"
+  },
+  "homepage": "https://github.com/theanthonyplan/redis-chat-relay#readme"
+}
