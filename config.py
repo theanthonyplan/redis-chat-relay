@@ -3,7 +3,7 @@ API_KEYS = {
   "hitbox": {},
   "irc": {},
   "discord": {},
-  "steam": "48D1471B4DEBD1ADD3D38C984FD61202"
+  "steam": "!@$124API-KEY-GOES-HERE-sdasdsdasd4F7777"
 }
 
 
@@ -11,22 +11,23 @@ SERVICES = {
   "twitch": {
         'username': '',
         'password': '',
-        'channel': '#porpoise_pete'
+        'channel': '#channel_name'
   },
   "hitbox": {
         'username': '',
         'password': '',
-        'channel': ''
+        'channel': 'aChannelName'
   },
   "irc": {
-        'username': '',
-        'password': '',
-        'channel': ''
-},
+      "username": "relayBot",
+      "password": "",
+      "server": "tcp:irc.geekshed.net:6667",
+      "channel": "#p0rp"
+    },
   "discord": {
         'username': '',
         'password': '',
-        'channel': ''
+        'channel': '#my_channel'
   },
   "steam": {
         'username': '',
