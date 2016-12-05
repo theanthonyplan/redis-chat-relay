@@ -11,7 +11,7 @@ SERVICES = {
   "twitch": {
         'username': '',
         'password': '',
-        'channel': '#channel_name'
+        'channels': ['#channel_name']
   },
   "hitbox": {
         'username': '',
